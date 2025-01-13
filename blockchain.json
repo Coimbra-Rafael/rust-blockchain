@@ -1,0 +1,39 @@
+{
+  "chain": [
+    {
+      "index": 0,
+      "previous_hash": "0",
+      "timestamp": 1736806801,
+      "transactions": [],
+      "hash": "",
+      "nonce": 0
+    },
+    {
+      "index": 1,
+      "previous_hash": "",
+      "timestamp": 1736806801,
+      "transactions": [
+        {
+          "sender": "Alice",
+          "recipient": "Bob",
+          "amount": 30
+        },
+        {
+          "sender": "Bob",
+          "recipient": "Charlie",
+          "amount": 20
+        },
+        {
+          "sender": "Network",
+          "recipient": "Miner1",
+          "amount": 50
+        }
+      ],
+      "hash": "0000f263905fe80cb006822e52a4a3b35baad4bf5b9070ab57f8153441813e9c",
+      "nonce": 64390
+    }
+  ],
+  "difficulty": 4,
+  "pending_transactions": [],
+  "mining_reward": 50
+}
