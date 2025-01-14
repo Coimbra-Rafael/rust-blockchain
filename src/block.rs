@@ -1,5 +1,5 @@
 use serde::{Serialize, Deserialize};
-use sha2::{Sha256, Digest};
+use sha2::{ Digest, Sha512};
 use time::OffsetDateTime;
 use crate::transaction::Transaction;
 
@@ -20,7 +20,7 @@ impl Block {
             "{}{}{}{:?}{}",  // Modificado para incluir transações
             self.index, self.previous_hash, self.timestamp, self.transactions, self.nonce
         );
-        let mut hasher = Sha256::new();
+        let mut hasher = Sha512::new();
         hasher.update(block_string);
         let result = hasher.finalize();
         format!("{:x}", result)

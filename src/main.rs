@@ -1,11 +1,13 @@
+use crate::blockchain::Blockchain;
+
 mod block;
 mod blockchain;
 mod transaction;
 
 fn main() {
-    let difficulty = 4;
-    let mining_reward = 50;
-    let mut my_blockchain = blockchain::Blockchain::new(difficulty, mining_reward);
+    let difficulty: usize = 4;
+    let mining_reward: u64 = 50;
+    let mut my_blockchain: Blockchain = blockchain::Blockchain::new(difficulty, mining_reward);
 
     // Adicionando transações
     my_blockchain.add_transaction(String::from("Alice"), String::from("Bob"), 30);
